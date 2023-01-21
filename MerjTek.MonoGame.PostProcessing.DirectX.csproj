@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Company>MerjTek</Company>
+    <Description>A package used with MonoGame.Framework.WindowsDX to add screen Post Processing.</Description>
+    <Copyright>MerjTek © 2023</Copyright>
+    <PackageProjectUrl>https://github.com/MerjTek/MerjTek.MonoGame.PostProcessing</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MerjTek/MerjTek.MonoGame.PostProcessing</RepositoryUrl>
+    <PackageTags>MonoGame;PostProcessing</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Authors>MerjTek</Authors>
+    <PreserveCompilationContext>false</PreserveCompilationContext>
+    <Title>$(AssemblyName)</Title>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>1.0.0 - First Release</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Effects\OpenGL\**" />
+    <Compile Remove="ToDo\**" />
+    <EmbeddedResource Remove="Effects\OpenGL\**" />
+    <EmbeddedResource Remove="ToDo\**" />
+    <None Remove="Effects\OpenGL\**" />
+    <None Remove="ToDo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Effects\DirectX_11\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="del $(SolutionDir)Effects\DirectX_11\*.cs&#xD;&#xA;$(SolutionDir)\BUILDSHADERS.BAT $(SolutionDir) DirectX_11" />
+  </Target>
+
+</Project>
