@@ -3,6 +3,18 @@
 MerjTek.MonoGame.PostProcessing is a screen post processing library that works on Windows with DirectX and OpenGL.
 
 
+## Currently Implemented
+
+|   | Post Pocessors |   |
+| :----: | :----:  | :----:  |
+| Circle Lens  | Contrast | Cross Stiching |
+| Crosshatching | Double Vision | Edge Detection |
+| Film Grain | Frosted Glass | Frosted Glass (Noise) |
+| Gaussian Blur | Grayscale | Invert |
+| Monochrome Edge Detection | Night Vision | Pixelate |
+| Scanline |  Sepia | Tint |
+
+
 ## Usage Sample
 
         ...
@@ -17,6 +29,11 @@ MerjTek.MonoGame.PostProcessing is a screen post processing library that works o
         // Create a HashSet for different post processors 
         // You can create more than 1 if desired
         _postProcesses = new HashSet<PostProcessBase>();
+
+        // Add post processors in any order
+        _postProcesses.Add(new PostProcessGrayscale(device));
+        _postProcesses.Add(new PostProcessInvert(device));
+        _postProcesses.Add(new PostProcessCircleLens(device, new Vector2(0.45f, 0.38f));
         ...
 
         ... // In Draw
@@ -42,24 +59,17 @@ MerjTek.MonoGame.PostProcessing is a screen post processing library that works o
 * The nuget for DirectX after building contains a dependency on Monogame.Framework.DesktopGL. I have to use the .nupkg editing tool to correct the dependency to Monogame.Framework.DirectX.
 
 
-## Future Post Processor Ideas (Not in any order)
+## Future Ideas (Not in any order)
 
-* Fog (3D)
-* Depth of Field (3D)
-* Poisson Disc Blur
-* Motion Blur
-* Lens Flare
-* Color Correction and Clamping
-* Tone Mapping
-* Ambient Occlusion	
-* Bloom
-* Crepuscular (God) Rays
-* Heat Haze
-* FXAA
-* MLAA (Morphological Anti-Aliasing)
-* SMAA (Subpixel Morphological Anti-Aliasing)
-* Gamma Correction
-* Color Grading (multiple shaders?)
+|   | Post Processors |   |
+| :----: | :----:  | :----:  |
+| Fog | Depth of Field | Poisson Disc Blur |
+| Motion Blur | Lens Flare | Color Correction |
+| Tone Mapping | Ambient Occlusion | Bloom |
+| Crepuscular (God) Rays | Heat Haze | FXAA |
+| Gamma Correction | MLAA (Morphological Anti-Aliasing) |  Color Grading |
+|   | SMAA (Subpixel Morphological Anti-Aliasing) |   | 
+
 * Feel free to suggest others
 
 
