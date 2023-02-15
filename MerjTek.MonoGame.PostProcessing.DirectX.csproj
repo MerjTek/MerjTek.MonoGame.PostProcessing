@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Company>MerjTek</Company>
-    <Description>A package used with MonoGame.Framework.WindowsDX to add screen Post Processing.</Description>
+    <Description>A package used with MonoGame (WindowsDX) to add screen Post Processing.</Description>
     <Copyright>MerjTek © 2023</Copyright>
     <PackageProjectUrl>https://github.com/MerjTek/MerjTek.MonoGame.PostProcessing</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MerjTek/MerjTek.MonoGame.PostProcessing</RepositoryUrl>
