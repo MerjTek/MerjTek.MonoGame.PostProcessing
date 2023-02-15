@@ -5,8 +5,8 @@ MerjTek.MonoGame.PostProcessing is a screen post processing library that works o
 
 
 ## Nuget Packages
--[ MerjTek.MonoGame.PostProcessing.DirectX ](https://www.nuget.org/packages/MerjTek.MonoGame.PostProcessing.DirectX) v1.0.1
--[ MerjTek.MonoGame.PostProcessing.OpenGL ](https://www.nuget.org/packages/MerjTek.MonoGame.PostProcessing.OpenGL) v1.0.1
+-[ MerjTek.MonoGame.PostProcessing.DirectX ](https://www.nuget.org/packages/MerjTek.MonoGame.PostProcessing.DirectX) v1.0.1  
+-[ MerjTek.MonoGame.PostProcessing.OpenGL ](https://www.nuget.org/packages/MerjTek.MonoGame.PostProcessing.OpenGL) v1.0.1  
 
 
 ## Currently Implemented
